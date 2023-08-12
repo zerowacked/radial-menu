@@ -12,10 +12,7 @@ func _ready():
 	degrees = calculate_degrees(icons.size())
 	angle = convert_degrees_to_radians(degrees)
 	var iconPosition = calculate_icon_render_position(angle)
-	print(iconPosition)
-	var newSprite = sprite.instantiate()
-	add_child(newSprite)
-	newSprite.position = iconPosition
+	instantiate_and_draw_icon(sprite,iconPosition)
 	var newDirection = iconPosition.rotated(angle)
 	print(newDirection)
 	var newNewSprite = sprite.instantiate()
@@ -31,3 +28,11 @@ func convert_degrees_to_radians(degreesInput):
 
 func calculate_icon_render_position(radianInput):
 	return (Vector2(cos(radianInput), sin(radianInput)).normalized()) * 100
+
+func instantiate_and_draw_icon(iconInput,drawLocation):
+	var newIcon = iconInput.instantiate()
+	add_child(newIcon)
+	newIcon.position = drawLocation
+
+func move_to_next_angle_position(angle, degrees):
+	pass

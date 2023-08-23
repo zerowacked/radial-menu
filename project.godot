@@ -13,7 +13,12 @@ config_version=5
 config/name="Radial Menu Implementation"
 run/main_scene="res://Main/main.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://GUI Icons/Sprite Images/icon.svg"
+
+[autoload]
+
+event_bus="*res://Singletons/event_bus.gd"
+player_stats="*res://Singletons/player_stats.gd"
 
 [display]
 

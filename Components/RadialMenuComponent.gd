@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Node2D
 
 @onready var sprite = preload("res://GUI Icons/icon_sprite.tscn")
 @onready var selectorFrame = preload("res://GUI Icons/selector_frame.tscn")

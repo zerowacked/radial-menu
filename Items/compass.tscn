@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://y5skhrqng6f8"]
+
+[ext_resource type="Script" path="res://Items/compass.gd" id="1_jok13"]
+[ext_resource type="Texture2D" uid="uid://buq7yxfbvs354" path="res://Items/Assets/Sprites/compass.PNG" id="2_1mp74"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh0me"]
+size = Vector2(230, 228)
+
+[node name="compass" type="Node2D"]
+script = ExtResource("1_jok13")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1mp74")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_wh0me")

@@ -6,15 +6,17 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kbnu"]
 size = Vector2(120, 120)
 
-[node name="IconSprite" type="Sprite2D"]
+[node name="IconSprite" type="Node2D"]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_a2h66")
 script = ExtResource("2_cau56")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a2h66")
+
 [node name="iconCollisionArea" type="Area2D" parent="."]
-monitoring = false
-monitorable = false
 
 [node name="iconCollisionShape" type="CollisionShape2D" parent="iconCollisionArea"]
 position = Vector2(7.15256e-06, 9.53674e-06)
 shape = SubResource("RectangleShape2D_3kbnu")
+
+[connection signal="area_entered" from="iconCollisionArea" to="." method="_on_icon_collision_area_area_entered"]

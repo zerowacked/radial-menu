@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://b03d574v8e5n7"]
+[gd_scene load_steps=4 format=3 uid="uid://b03d574v8e5n7"]
 
 [ext_resource type="Texture2D" uid="uid://b50386j2f7ckd" path="res://GUI Icons/Sprite Images/Selector Frame/button_04_frame.png" id="1_7rbvg"]
+[ext_resource type="Script" path="res://GUI Icons/selector_frame.gd" id="2_2rnf8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c541q"]
 size = Vector2(265, 265)
 
-[node name="SelectorFrame" type="Sprite2D"]
+[node name="SelectorFrame" type="Node2D"]
 scale = Vector2(0.15, 0.15)
+script = ExtResource("2_2rnf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7rbvg")
 
 [node name="selectorCollisionArea" type="Area2D" parent="."]
@@ -14,3 +18,5 @@ texture = ExtResource("1_7rbvg")
 [node name="selectorCollisionShape" type="CollisionShape2D" parent="selectorCollisionArea"]
 position = Vector2(0.833333, 0.833332)
 shape = SubResource("RectangleShape2D_c541q")
+
+[connection signal="area_entered" from="selectorCollisionArea" to="." method="_on_selector_collision_area_area_entered"]

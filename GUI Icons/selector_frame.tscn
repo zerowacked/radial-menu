@@ -7,6 +7,7 @@
 size = Vector2(265, 265)
 
 [node name="SelectorFrame" type="Node2D"]
+process_mode = 3
 scale = Vector2(0.15, 0.15)
 script = ExtResource("2_2rnf8")
 

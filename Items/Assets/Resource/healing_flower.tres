@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ConsumableItemResource" load_steps=2 format=3 uid="uid://ci2aeh3effsfj"]
+
+[ext_resource type="Script" path="res://Items/Assets/Resource/consumable_item.gd" id="1_4vqe6"]
+
+[resource]
+script = ExtResource("1_4vqe6")
+name = ""
+max_count = 9
+quantity = 1
+path = "res://Items/healing_flower.tscn\""

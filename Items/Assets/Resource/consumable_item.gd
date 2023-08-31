@@ -6,6 +6,7 @@ signal user_clicked
 @export var name : String
 @export var max_count : int = 9
 @export var quantity : int = 0
+@export var path : String = ""
 
 func on_user_click():
 	pass

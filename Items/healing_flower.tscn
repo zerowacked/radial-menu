@@ -7,6 +7,7 @@
 size = Vector2(248, 247)
 
 [node name="healing_flower" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_a502p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

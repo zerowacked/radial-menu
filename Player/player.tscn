@@ -8,8 +8,8 @@ radius = 15.0
 height = 84.0
 
 [node name="Player" type="CharacterBody2D"]
+process_mode = 3
 script = ExtResource("1_584jy")
-menuState = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ivqg1")

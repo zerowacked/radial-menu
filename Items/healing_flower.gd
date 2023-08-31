@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var effect = preload("res://Items/Assets/Resource/test_item_effect.tscn")
+const healing_flower_resource = preload("res://Items/Assets/Resource/healing_flower.tres")
 
 signal selected
 signal item_used
@@ -8,8 +9,11 @@ signal item_used
 enum SELECT_STATE{SELECTED,NOT_SELECTED}
 
 @export var menu_state:SELECT_STATE = SELECT_STATE.NOT_SELECTED
-@export var quantity : int = 0
-@export var itemId : int = 0
+#@export var quantity : int = 0
+#@export var itemId : int = 0
+
+func _ready():
+	print(healing_flower_resource.quantity)
 
 func _on_area_2d_area_entered(_area) -> void:
 	menu_state = SELECT_STATE.SELECTED

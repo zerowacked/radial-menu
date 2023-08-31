@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjb4xlheb8cxo"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://compass_test_effect.gd" id="1_4f802"]
+[ext_resource type="Script" path="res://Items/Assets/Resource/compass_test_effect.gd" id="1_4f802"]
 
 [node name="compass_test_effect" type="Control"]
 layout_mode = 3
